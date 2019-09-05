@@ -1,1 +1,1 @@
-print("hello world")
+for a in xrange(b.c):
