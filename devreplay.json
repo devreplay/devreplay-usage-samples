@@ -14,15 +14,17 @@
     "description": "Python2互換のためsixを使用してください",
     "severity": "Warning"
   },
-
-
-{
-  "condition": [
-      "ans ="
-  ],
-   "consequent": [
-      "answer ="
-  ],
-  "severity": "Information"
-}
+  {
+    "condition": [
+      "$3 = $1",
+      "$1 = $2",
+      "$2 = $3"
+    ],
+    "consequent": [
+      "$1, $2 = $2, $1"
+    ],
+    "author": "Yuki Ueda",
+    "description": "Value exchanging can be one line",
+    "severity": "Information"
+  }
 ]
