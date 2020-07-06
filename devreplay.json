@@ -1,7 +1,7 @@
 [
   {
-    "condition": ["hello-$3"],
-    "consequent": ["Hello $3"]
+    "condition": ["hello"],
+    "consequent": ["Hello"]
   },
   {
     "condition": [
