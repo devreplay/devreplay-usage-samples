@@ -1,4 +1,4 @@
-print("hello world")
+print("Fix test")
 
 tmp = a
 a = b
