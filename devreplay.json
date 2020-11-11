@@ -1,30 +1,34 @@
 [
   {
-    "condition": ["hello"],
-    "consequent": ["Hello"]
+    "before": [
+      "hello"
+    ],
+    "after": [
+      "Hello"
+    ]
   },
   {
-    "condition": [
-        "for ${1:Name} in range($0):"
+    "before": [
+      "for ${1:Name} in range($0):"
     ],
-    "consequent": [
-        "import six",
-        "for ${1:Name} in six.moves.range($0):"
+    "after": [
+      "import six",
+      "for ${1:Name} in six.moves.range($0):"
     ],
-    "description": "Python2互換のためsixを使用してください",
+    "message": "Python2互換のためsixを使用してください",
     "severity": "Warning"
   },
   {
-    "condition": [
+    "before": [
       "tmp = $1",
       "$1 = $2",
       "$2 = tmp"
     ],
-    "consequent": [
+    "after": [
       "$1, $2 = $2, $1"
     ],
     "author": "Yuki Ueda",
-    "description": "Value exchanging can be one line",
+    "message": "Value exchanging can be one line",
     "severity": "Information"
   }
 ]
