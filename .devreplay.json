@@ -1,0 +1,12 @@
+[
+  {
+    "before": [
+      "tmp=(?<a>\\w+)",
+      "\\k<a>=(?<b>\\w+)",
+      "\\k<b>=tmp"
+    ],
+    "after": "$1,$2=$2,$1",
+    "isRegex": true,
+    "matchCase": true
+  }
+]

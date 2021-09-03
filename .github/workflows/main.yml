@@ -1,17 +1,13 @@
-name: "DevReplay test"
-on: # rebuild any PRs and main branch changes
-  pull_request:
-  push:
-    branches:
-      - master
-jobs:
-  devreplay:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: npm install devreplay
-      - uses: actions/setup-node@v1
-        with:
-          node-version: "12.x"
-      - name: Run devreplay
-        run: node_modules/.bin/devreplay --dir src/ devreplay.json
+name: Lint
+on: [push, pull_request]
+  jobs:
+    devreplay:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-node@v2
+          with:
+            node-version: "14.x"
+        - run: npm install -g devreplay
+        - name: Run devreplay
+          run: devreplay ./ .devreplay.json
