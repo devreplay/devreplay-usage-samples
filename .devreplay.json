@@ -5,6 +5,7 @@
       "a=b",
       "b=tmp"
     ],
-    "after": "a,b=b,a"
+    "after": "a,b=b,a",
+    "severity": "error"
   }
 ]
