@@ -1,4 +1,9 @@
-[
+[  
+  {
+    "before": "c = 3",
+    "after": "c=3",
+    "severity": "error"
+  },
   {
     "before": [
       "tmp=a",
